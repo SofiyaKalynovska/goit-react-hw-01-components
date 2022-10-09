@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import color from 'random-hex-color'
 
 export const StatisticsWrapper = styled.section`
-background-color: #fff;
 width: 300px;
+margin: 30px;
 border: 2px solid #CBC1C1;
 
 `
