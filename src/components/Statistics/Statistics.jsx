@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import {StatisticsWrapper, StatisticsTitle, StatisticsList, StatisticsListItem, DownloadFormat, DownloadQuantity } from "./Statistics.styled";
 
 export default function Statistics({ title, stats}) {
@@ -16,4 +16,15 @@ export default function Statistics({ title, stats}) {
       </StatisticsList>
     </StatisticsWrapper>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
