@@ -4,7 +4,7 @@ import {StatisticsWrapper, StatisticsTitle, StatisticsList, StatisticsListItem, 
 export default function Statistics({ title, stats}) {
   return (
     <StatisticsWrapper>
-      {title ? <StatisticsTitle>{title}</StatisticsTitle> : ''}
+      {title ? <StatisticsTitle>{title}</StatisticsTitle> : null}
 
       <StatisticsList>
         {stats.map(stat => (
@@ -19,7 +19,7 @@ export default function Statistics({ title, stats}) {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
